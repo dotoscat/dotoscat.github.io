@@ -7,21 +7,36 @@
     </head>
     <body>
         <header>
-        <h1 class="centrar"><a href="/">oscartrigarmatica</a></h1>
-        <nav class="navegacion">
+            <h1 class="centrar"><a href="/">oscartrigarmatica</a></h1>
+        </header>
+        <nav id="paginas" class="sticky-nav navegacion">
             <ul>
-                    <li><a class="boton " href="/pages/acerca-de-este-sitio.html">Acerca de este sitio</a></li>
-                    <li><a class="boton " href="/pages/contacto.html">Contacto</a></li>
-                    <li><a class="boton " href="/pages/politica-de-cookies.html">Política de cookies</a></li>
-                    <li><a class="boton " href="/pages/portafolio.html">Portafolio</a></li>
-                    <li><a class="boton " href="/pages/sobre-mi.html">Sobre mí</a></li>
-                    <li><a class="boton " href="/category/desarrollo-web.html">Desarrollo web</a></li>
-                    <li><a class="boton activo" href="/category/misc.html">misc</a></li>
+                <li><a class="boton " href="/pages/acerca-de-este-sitio.html">Acerca de este sitio</a></li>
+                <li><a class="boton " href="/pages/contacto.html">Contacto</a></li>
+                <li><a class="boton " href="/pages/politica-de-cookies.html">Política de cookies</a></li>
+                <li><a class="boton " href="/pages/portafolio.html">Portafolio</a></li>
+                <li><a class="boton " href="/pages/sobre-mi.html">Sobre mí</a></li>
             </ul>
         </nav>
-        </header>
         <main>
-            <section>
+            <aside id="menu">
+                <nav id="categorias">
+                    <h2>Categorías</h2>
+                    <ul>
+                    <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
+                    <li><a class="activo" href="/category/misc.html">misc</a></li>
+                    </ul>
+                </nav>
+                <nav id="archivo">
+                    <h2>Archivo</h2>
+                    <ul>
+                        <li>Hola 1</li>
+                        <li>Hola 2</li>
+                    </ul>
+                </nav>
+            </aside>
+            <section id="contenido" class="lectura">
+                <div id="desplazamiento">
     <article>
         <header>
             <h2>Hola mundo</h2>
@@ -31,6 +46,7 @@
 <p>¡Hola mundo! :)</p>
         </div>
     </article>
+                </div>
             </section>
         </main>
         <footer style="font-size: xx-small">

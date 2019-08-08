@@ -1,116 +1,44 @@
-html {
-    height: 100%;
-    overflow-y: hidden;
-}
-
-.navegacion{
-    margin-bottom: 0.5rem;
-}
-
-.navegacion > ul {
-    padding-left: 0;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    list-style-type: none;
-    list-style-position: inside;
-}
-
-.navegacion > ul li {
-    flex-basis: auto;
-    padding: 0.5rem;
-}
-
-.flex-end{
-    margin-left: auto !important;
-}
-
-.flex-end > * {
-    margin: 0 !important;
-    padding: 0 !important;
-}
-
-#paginador {
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-article p, main p {
-    text-indent: 1rem;
-}
-
-main {
-    padding: 1rem;
-    background-color: white;
-    overflow-y: hidden;
-    height: 100%;
-    align-items: stretch;
-    border-radius: 0.5rem;
-    border: 1px solid #4d4dff;
-}
-
-main a {
-    color: #99f;
-}
-
-main a:active{
-    color: #9cf;
-}
-
-main a:visited{
-    color: #a64dff;
-}
-
-main section {
-    height: 100%;
-    overflow-y: auto;
-}
-
 body {
-    display: flex;
-    flex: 1 1 0;
-    flex-direction: column;
     color: #222;
-    height: 100%;
     background-color: #99f;
-    line-height: 1.4rem;
+    line-height: 1.6rem;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
 }
 
-header > h1 a {
-    text-decoration-line: none;
-    color: #222;
+aside#menu{
+    display: flex;
+    top: 0;
 }
 
-@media screen and (max-width: 60rem){
-    main{
-        margin: 1rem;
-    }
+nav ul{
+    list-style-type: none;
+    padding-left: 0;
 }
 
-@media screen and (min-width: 60rem){
-    main{
-        width: 60rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.navegacion ul{
+    display: flex;
+}
+
+.navegacion ul li{
+    margin: 0.5rem;
+}
+
+.sticky-nav{
+    background-color: #99f;
+    border-bottom: 1px solid #4d4dff;
+    position: sticky;
+    top: 0;
+}
+
+.lectura {
+    background-color: #EEE;
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
 }
 
 .centrar {
     text-align: center;
-}
-
-.boton {
-    padding: 0.5rem;
-    white-space: nowrap;
-    background-color: #4d4dff;
-    color: white;
-    border: 1px solid #e6e6ff;
-    border-radius: 0.25rem;
-}
-
-.activo {
-    background-color: #EEE;
-    color: #99f;
 }
