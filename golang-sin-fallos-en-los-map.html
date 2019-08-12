@@ -4,6 +4,14 @@
         <meta charset="utf8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
         <link rel="stylesheet" href="/theme/css/main.css">
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://dotoscat.github.io" />
+    <meta name="twitter:title" content="Golang sin fallos en los map" />
+    <meta name="twitter:description" content="&lt;p&gt;Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
+map contando el número de palabras que aparecen en una cadena. Tenía que completar una función &lt;em&gt;WordCount&lt;/em&gt; para que pasara las pruebas.&lt;/p&gt;
+&lt;p&gt;Mi primera solución a este problema fué este&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;func WordCount(s string) map …&lt;/pre&gt;&lt;/div&gt;" />
     </head>
     <body>
         <header>
@@ -23,7 +31,7 @@
                 <nav id="categorias">
                     <h2>Categorías</h2>
                     <ul>
-                    <li><a class="" href="/category/backend.html">Backend</a></li>
+                    <li><a class="activo" href="/category/backend.html">Backend</a></li>
                     <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
                     <li><a class="" href="/category/misc.html">misc</a></li>
                     </ul>
@@ -36,7 +44,46 @@
             </aside>
             <section id="contenido" class="lectura">
                 <div id="desplazamiento">
-                <h1>¡Hola mundo! No olvides cambiar esto en la plantilla que hereda la plantilla base.</h1>
+    <article>
+        <header>
+            <h2>Golang sin fallos en los map</h2>
+        </header>
+        <div id="contenido">
+            <p>Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
+map contando el número de palabras que aparecen en una cadena. Tenía que completar una función <em>WordCount</em> para que pasara las pruebas.</p>
+<p>Mi primera solución a este problema fué este</p>
+<div class="highlight"><pre><span></span>func WordCount(s string) map[string]int {
+    var words map[string]int = make(map[string]int)
+    for _, word := range strings.Fields(s) {
+        _, ok := words[word]
+        if ok {
+            words[word] += 1
+        }else{
+            words[word] = 1
+        }
+    }
+    return words
+}
+</pre></div>
+
+
+<p>Todo bien, hasta que me dí cuenta de un detalle: Si la clave no estaba en <em>words</em>, que es el mapa
+al devolver, su valor retornaría 0. Como me gusta mejorar las cosas en lo posible hice otra
+solución que funciona igual con menos líneas.</p>
+<div class="highlight"><pre><span></span>func WordCount(s string) map[string]int {
+    var words map[string]int = make(map[string]int)
+    for _, word := range strings.Fields(s) {
+        words[word] += 1
+    }
+    return words
+}
+</pre></div>
+
+
+<p><code>words[word] += 1</code> sería lo mismo que <code>words[word] = words[word] + 1</code></p>
+<p>Continúo con el tour.</p>
+        </div>
+    </article>
                 </div>
             </section>
         </main>

@@ -6,9 +6,30 @@ body {
     margin: 0;
 }
 
+pre, code{
+    background-color: black;
+    color: lightgrey;
+}
+
+pre{
+    overflow-x: auto;
+}
+
 aside#menu{
     display: flex;
+    flex-wrap: nowrap;
     top: 0;
+    overflow-x: auto;
+    z-index: -10;
+}
+
+aside#menu nav{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+aside#menu nav * {
+    word-wrap: normal;
 }
 
 nav ul{
@@ -18,10 +39,22 @@ nav ul{
 
 .navegacion ul{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .navegacion ul li{
     margin: 0.5rem;
+}
+
+.navegacion li a {
+    background-color: white;
+    color: #4d4dff;
+    padding: 0.25rem;
+}
+
+.navegacion .activo {
+    background-color: #99f;
+    color: #EEE;
 }
 
 .sticky-nav{
@@ -41,4 +74,10 @@ nav ul{
 
 .centrar {
     text-align: center;
+}
+
+@media screen and (max-width: 59.999rem){
+    header h1{
+        font-size: small;
+    }
 }

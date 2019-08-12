@@ -1,0 +1,150 @@
+html, body {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.navegacion{
+    margin-bottom: 0.5rem;
+}
+
+.navegacion > ul {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    list-style-type: none;
+    list-style-position: inside;
+}
+
+.navegacion > ul li {
+    flex-basis: auto;
+    padding: 0.5rem;
+}
+
+.flex-end{
+    margin-left: auto !important;
+}
+
+.flex-end > * {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.pegajoso {
+    position: sticky;
+    top: 32px;
+}
+
+#paginador {
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+#contenido {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article p, main p {
+    text-indent: 1rem;
+}
+
+main {
+    display: flex;
+    overflow-y: hidden;
+}
+
+#desplazamiento {
+    height: 100%;
+    overflow-y: auto;
+}
+
+main section {
+    padding: 1rem;
+    overflow-y: hidden;
+    background-color: white;
+    align-items: stretch;
+    border-radius: 0.25rem;
+    border: 1px solid #4d4dff;
+}
+
+main a {
+    color: #99f;
+}
+
+main a:active{
+    color: #9cf;
+}
+
+main a:visited{
+    color: #a64dff;
+}
+
+body {
+    display: flex;
+    flex: 1 1 0;
+    flex-direction: column;
+    color: #222;
+    height: 100%;
+    background-color: #99f;
+    line-height: 1.4rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header > h1 a {
+    text-decoration-line: none;
+    color: #222;
+}
+
+@media screen and (max-width: 59.999rem){
+    header h1{
+        font-size: small;
+    }
+    #menu-izquierdo{
+        display: flex;
+        flex-direction: row;
+    }
+    #paginas{
+        font-size: smaller;
+    }
+    #contenido{
+        overflow-y: auto;
+        height: 100%;
+        align-self: stretch;
+    }
+    main{
+        margin: 0rem;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 60rem){
+
+    #contenido{
+        width: 60rem;
+    }
+    
+    #menu-izquierdo{
+        flex-shrink: 0;
+        min-width: 12%;
+    }
+}
+
+.centrar {
+    text-align: center;
+}
+
+.boton {
+    padding: 0.5rem;
+    white-space: nowrap;
+    background-color: #4d4dff;
+    color: white;
+    border: 1px solid #e6e6ff;
+    border-radius: 0.25rem;
+}
+
+.activo {
+    background-color: #EEE;
+    color: #99f;
+}
