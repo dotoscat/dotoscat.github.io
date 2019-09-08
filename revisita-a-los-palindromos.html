@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" href="/theme/css/main.css">
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="https://dotoscat.github.io" />
+    <meta name="twitter:title" content="Revisita a los palindromos" />
+    <meta name="twitter:description" content="&lt;p&gt;Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
+La implementación que hice era bastante sencilla para lo que me pedía el ejercicio&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;esPalindromo xs
+| xs == [] = False
+| odd (length xs) = False --es impar?
+| otherwise = 
+    drop mitad xs == reverse (take mitad xs …&lt;/pre&gt;&lt;/div&gt;" />
+    <script src="/theme/js/es-palindromo.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1 class="centrar"><a href="/">oscartrigarmatica</a></h1>
+        </header>
+        <nav id="paginas" class="sticky-nav navegacion">
+            <ul>
+                <li><a class="boton " href="/pages/acerca-de-este-sitio.html">Acerca de este sitio</a></li>
+                <li><a class="boton " href="/pages/contacto.html">Contacto</a></li>
+                <li><a class="boton " href="/pages/politica-de-cookies.html">Política de cookies</a></li>
+                <li><a class="boton " href="/pages/portafolio.html">Portafolio</a></li>
+                <li><a class="boton " href="/pages/sobre-mi.html">Sobre mí</a></li>
+            </ul>
+        </nav>
+        <main>
+            <aside id="menu">
+                <nav id="categorias">
+                    <h2>Categorías</h2>
+                    <ul>
+                    <li><a class="" href="/category/backend.html">Backend</a></li>
+                    <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
+                    <li><a class="" href="/category/misc.html">misc</a></li>
+                    <li><a class="activo" href="/category/programacion.html">Programación</a></li>
+                    </ul>
+                </nav>
+                <nav id="archivo">
+                    <h2>Archivo</h2>
+                    <ul>
+                    </ul>
+                </nav>
+            </aside>
+            <section id="contenido" class="lectura">
+                <div id="desplazamiento">
+    <article>
+        <header>
+            <h2>Revisita a los palindromos</h2>
+        </header>
+        <div id="contenido">
+            <p>Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
+La implementación que hice era bastante sencilla para lo que me pedía el ejercicio</p>
+<div class="highlight"><pre><span></span>esPalindromo xs
+| xs == [] = False
+| odd (length xs) = False --es impar?
+| otherwise = 
+    drop mitad xs == reverse (take mitad xs) 
+    where
+        mitad = div (length xs) 2
+</pre></div>
+
+
+<p>Hace uso de funciones ya definidas en el lenguaje, y tiene un fallo enorme: Dice que la palabra no es palíndroma si su longitud es impar.
+Por cosas de prácticas <a href="https://es.khanacademy.org/computing/computer-science/algorithms">hice un curso de khan academy sobre algoritmos</a> y ahí aprendí de forma apropiada como hacer la función en condiciones.
+Por definición un algoritmo es un conjunto de pasos para realizar una tarea, no hace falta matemáticas bastante avanzadas para hacer esto (pero pueden formar parte si haces un algoritmo que impliquen simulaciones físicas, por ejemplo).</p>
+<p>Para saber si una palabra es palíndroma:</p>
+<ol>
+<li>¿La cadena está vacía o sólo tiene una letra? <em>Hemos terminado</em>, la palabra <strong>es palídroma</strong>.</li>
+<li>Nos fijamos si la primera y última letra de palabra coinciden.</li>
+<li>Si no coinciden <em>hemos terminado</em>, la palabra <strong>no es palíndroma</strong>, de lo contrario continúa.</li>
+<li>Se coge una subcadena a partir de quitar la primera y última letra de la palabra, y le aplicamos los pasos a partir del punto 1.</li>
+</ol>
+<p>El punto 1. es lo que se conoce como el <em>caso base</em> y ahí es donde termina la función (ya sea recursiva o no) afirmando que la palabra es palíndroma. (Un ejemplo básico es la palabra "a", que se lee igual de derecha a izquierda).</p>
+<p>Pues con esto se redefine la función de estar forma</p>
+<pre>
+esPalindromo2 xs
+    | length xs  2 = True
+    | head xs == last xs = esPalindromo2 (subcadena xs)
+    | otherwise = False
+        where subcadena xs = tail (init xs)
+</pre>
+
+<p>Se prueba</p>
+<pre>
+*Main> esPalindromo2 ""
+True
+*Main> esPalindromo2 "a"
+True
+*Main> esPalindromo2 "abba"
+True
+*Main> esPalindromo2 "girafarig"
+True
+*Main> esPalindromo2 "girafariga"
+False
+*Main> esPalindromo2 "gi"        
+False
+*Main> esPalindromo2 "asa"
+True
+</pre>
+
+<p>Pues esto está listo</p>
+<h2>BONO: Saber si una palabra es palíndroma en JavaScript</h2>
+<p><input id="palabra" type="text" min="0" max="64" /> <span id="esnoes">es</span> palíndroma.</p>
+<p><a href="/theme/js/es-palindromo.js">El código fuente en JavaScript</a></p>
+        </div>
+    </article>
+                </div>
+            </section>
+        </main>
+        <footer style="font-size: xx-small">
+            <p>Este sitio es generado con <a href="https://docs.getpelican.com/en/stable/">Pelican.</a></p>
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">oscartrigarmatica</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Oscar TrianoG</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+        </footer>
+    </body>
+</html>
