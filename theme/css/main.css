@@ -7,6 +7,7 @@ body {
 }
 
 pre, code{
+    padding: 1em;
     background-color: black;
     color: lightgrey;
 }
@@ -60,8 +61,8 @@ nav ul{
 .sticky-nav{
     background-color: #99f;
     border-bottom: 1px solid #4d4dff;
-    position: sticky;
-    top: 0;
+    /*position: sticky;
+    top: 0;*/
 }
 
 .lectura {
@@ -79,5 +80,8 @@ nav ul{
 @media screen and (max-width: 59.999rem){
     header h1{
         font-size: small;
+    }
+    pre, code{
+        padding: 0;
     }
 }

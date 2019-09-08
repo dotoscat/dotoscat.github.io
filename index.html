@@ -26,6 +26,7 @@
                     <li><a class="" href="/category/backend.html">Backend</a></li>
                     <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
                     <li><a class="" href="/category/misc.html">misc</a></li>
+                    <li><a class="" href="/category/programacion.html">Programación</a></li>
                     </ul>
                 </nav>
                 <nav id="archivo">
@@ -38,6 +39,27 @@
                 <div id="desplazamiento">
     <section id="articles">
         <ul>
+            <li>
+            <article>
+                <header>
+                    <h3><a href="/revisita-a-los-palindromos.html">Revisita a los palindromos</a></h3>
+                    <ul>
+                        <li><date>2019-09-07</date></li>
+                        <li><a href="/category/programacion.html">Programación</a></li>
+                    </ul>
+                </header>
+                <summary>
+                    <p>Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
+La implementación que hice era bastante sencilla para lo que me pedía el ejercicio</p>
+<div class="highlight"><pre><span></span>esPalindromo xs
+| xs == [] = False
+| odd (length xs) = False --es impar?
+| otherwise = 
+    drop mitad xs == reverse (take mitad xs …</pre></div>
+                </summary>
+                <a href="/revisita-a-los-palindromos.html">Leer más</a>
+            </article>
+            </li>
             <li>
             <article>
                 <header>
@@ -72,22 +94,6 @@ de un servidor web con soporte con un lenguaje de programación como PHP y una b
                 <a href="/generadores-de-sitios-web-estaticos.html">Leer más</a>
             </article>
             </li>
-            <li>
-            <article>
-                <header>
-                    <h3><a href="/hola-mundo.html">Hola mundo</a></h3>
-                    <ul>
-                        <li><date>2019-07-04</date></li>
-                        <li><a href="/category/misc.html">misc</a></li>
-                    </ul>
-                </header>
-                <summary>
-                    <h1>Hola mundo</h1>
-<p>¡Hola mundo! :)</p>
-                </summary>
-                <a href="/hola-mundo.html">Leer más</a>
-            </article>
-            </li>
         </ul>
     </section>
                 </div>
@@ -95,7 +101,7 @@ de un servidor web con soporte con un lenguaje de programación como PHP y una b
         <li><a class="boton">Inicio</a></li>
         <li>            1
         </li>
-        <li><a class="boton">Fin</a></li>
+        <li><a class="boton" href="/index2.html">Siguiente</a></li>
 </ul></nav>
             </section>
         </main>

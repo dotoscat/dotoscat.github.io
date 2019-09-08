@@ -23,6 +23,7 @@
                 <nav id="categorias">
                     <h2>Categorías</h2>
                     <ul>
+                    <li><a class="" href="/category/backend.html">Backend</a></li>
                     <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
                     <li><a class="" href="/category/misc.html">misc</a></li>
                     <li><a class="activo" href="/category/programacion.html">Programación</a></li>
@@ -41,20 +42,22 @@
             <li>
             <article>
                 <header>
-                    <h3><a href="/golang-sin-fallos-en-los-map.html">Golang sin fallos en los map</a></h3>
+                    <h3><a href="/revisita-a-los-palindromos.html">Revisita a los palindromos</a></h3>
                     <ul>
-                        <li><date>2019-08-11</date></li>
+                        <li><date>2019-09-07</date></li>
                         <li><a href="/category/programacion.html">Programación</a></li>
                     </ul>
                 </header>
                 <summary>
-                    <p>Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
-map. Tenía que completar una función <em>WordCount</em> para que pasara las pruebas.</p>
-<p>Mi primera solución a este problema fué este</p>
-<div class="highlight"><pre><span></span>func WordCount(s string) map[string]int {
-    var words map[string]int = make(map[string …</pre></div>
+                    <p>Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
+La implementación que hice era bastante sencilla para lo que me pedía el ejercicio</p>
+<div class="highlight"><pre><span></span>esPalindromo xs
+| xs == [] = False
+| odd (length xs) = False --es impar?
+| otherwise = 
+    drop mitad xs == reverse (take mitad xs …</pre></div>
                 </summary>
-                <a href="/golang-sin-fallos-en-los-map.html">Leer más</a>
+                <a href="/revisita-a-los-palindromos.html">Leer más</a>
             </article>
             </li>
         </ul>
