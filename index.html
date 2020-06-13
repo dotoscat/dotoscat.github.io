@@ -1,113 +1,56 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html>
     <head>
-        <meta charset="utf8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-        <link rel="stylesheet" href="/theme/css/main.css">
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>oscartrigarmatica</title>
+        <link rel="stylesheet" href="/css/main.css">
+        
+        
+        
+        
     </head>
     <body>
         <header>
-            <h1 class="centrar"><a href="/">oscartrigarmatica</a></h1>
+            <h1><a href="/">oscartrigarmatica</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Principal</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                    <li><a href="/pages/politica-de-cookies.html">Política de cookies</a></li>
+                    <li><a href="/pages/portafolio.html">Portafolio</a></li>
+                    <li><a href="/pages/sobremi.html">Sobre mí</a></li>
+                    
+                </ul>
+            </nav>
         </header>
-        <nav id="paginas" class="sticky-nav navegacion">
-            <ul>
-                <li><a class="boton " href="/pages/acerca-de-este-sitio.html">Acerca de este sitio</a></li>
-                <li><a class="boton " href="/pages/contacto.html">Contacto</a></li>
-                <li><a class="boton " href="/pages/politica-de-cookies.html">Política de cookies</a></li>
-                <li><a class="boton " href="/pages/portafolio.html">Portafolio</a></li>
-                <li><a class="boton " href="/pages/sobre-mi.html">Sobre mí</a></li>
-            </ul>
-        </nav>
-        <main>
-            <aside id="menu">
-                <nav id="categorias">
-                    <h2>Categorías</h2>
-                    <ul>
-                    <li><a class="" href="/category/backend.html">Backend</a></li>
-                    <li><a class="" href="/category/desarrollo-web.html">Desarrollo web</a></li>
-                    <li><a class="" href="/category/misc.html">misc</a></li>
-                    <li><a class="" href="/category/programacion.html">Programación</a></li>
-                    </ul>
-                </nav>
-                <nav id="archivo">
-                    <h2>Archivo</h2>
-                    <ul>
-                    </ul>
-                </nav>
-            </aside>
-            <section id="contenido" class="lectura">
-                <div id="desplazamiento">
-    <section id="articles">
+        
+    <section>
         <ul>
+        
             <li>
-            <article>
-                <header>
-                    <h3><a href="/revisita-a-los-palindromos.html">Revisita a los palindromos</a></h3>
-                    <ul>
-                        <li><date>2019-09-08</date></li>
-                        <li><a href="/category/programacion.html">Programación</a></li>
-                    </ul>
-                </header>
-                <summary>
-                    <p>Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
-La implementación que hice era bastante sencilla para lo que me pedía el ejercicio</p>
-<div class="highlight"><pre><span></span>esPalindromo xs
-| xs == [] = False
-| odd (length xs) = False --es impar?
-| otherwise = 
-    drop mitad xs == reverse (take mitad xs …</pre></div>
-                </summary>
-                <a href="/revisita-a-los-palindromos.html">Leer más</a>
-            </article>
+                <a href="/posts/la-practica-hace-al-maestro.html">2020-6-10 - La práctica hace al maestro</a>
             </li>
+        
             <li>
-            <article>
-                <header>
-                    <h3><a href="/golang-sin-fallos-en-los-map.html">Golang sin fallos en los map</a></h3>
-                    <ul>
-                        <li><date>2019-08-12</date></li>
-                        <li><a href="/category/backend.html">Backend</a></li>
-                    </ul>
-                </header>
-                <summary>
-                    <p>Mientras estaba haciendo el tour para aprender Golang me encontré con un ejercicio para practicar
-map contando el número de palabras que aparecen en una cadena. Tenía que completar una función <em>WordCount</em> para que pasara las pruebas.</p>
-<p>Mi primera solución a este problema fué este</p>
-<div class="highlight"><pre><span></span>func WordCount(s string) map …</pre></div>
-                </summary>
-                <a href="/golang-sin-fallos-en-los-map.html">Leer más</a>
-            </article>
+                <a href="/posts/go-map-sinfallos.html">2019-8-12 - Golang sin fallos en los map</a>
             </li>
-            <li>
-            <article>
-                <header>
-                    <h3><a href="/generadores-de-sitios-web-estaticos.html">Generadores de sitios web estaticos</a></h3>
-                    <ul>
-                        <li><date>2019-07-20</date></li>
-                        <li><a href="/category/desarrollo-web.html">Desarrollo web</a></li>
-                    </ul>
-                </header>
-                <summary>
-                    <p>Hoy en día para crear un sitio o un blog tiras de wordpress, drupal u otro CMS donde requieres al menos
-de un servidor web con soporte con un lenguaje de programación como PHP y una base de datos SQL como MySQL o PostreSQL. Algunos de ellos tienen la función …</p>
-                </summary>
-                <a href="/generadores-de-sitios-web-estaticos.html">Leer más</a>
-            </article>
-            </li>
+        
         </ul>
+        <nav>
+            
+             | 
+            
+        </nav>
     </section>
-                </div>
-<nav class="navegacion"><ul>
-        <li><a class="boton">Inicio</a></li>
-        <li>            1
-        </li>
-        <li><a class="boton" href="/index2.html">Siguiente</a></li>
-</ul></nav>
-            </section>
-        </main>
-        <footer style="font-size: xx-small">
-            <p>Este sitio es generado con <a href="https://docs.getpelican.com/en/stable/">Pelican.</a></p>
-            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">oscartrigarmatica</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Oscar TrianoG</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Reconocimiento-CompartirIgual 4.0 Internacional License</a>.</p>
+
+        <footer>
+            
+            
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Excepto donde se indique lo contrario esta obra cuyo autor es <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Oscar Triano García</span> está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Reconocimiento-CompartirIgual 4.0 Internacional de Creative Commons</a>.</p>
+            
+            
+            <small>This site is synthetized by <a href="https://github.com/dotoscat/archivasa">archivasa</a></small>
         </footer>
     </body>
 </html>

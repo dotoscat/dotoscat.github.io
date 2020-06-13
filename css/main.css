@@ -1,0 +1,32 @@
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    background-color: azure;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60rem;
+    line-height: 1.4rem;
+}
+
+header h1, section nav {
+    text-align: center;
+}
+
+footer {
+    font-size: small;
+}
+
+article {
+    background-color: aliceblue;
+    border-top: thin solid lightblue;
+    border-bottom: thin solid lightblue;
+    padding: 1rem;
+}
+
+@media (min-width: 60rem) {
+    article {
+        border-left: thin solid lightblue;
+        border-right: thin solid lightblue;
+    }
+}

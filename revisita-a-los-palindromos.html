@@ -10,11 +10,11 @@
     <meta name="twitter:title" content="Revisita a los palindromos" />
     <meta name="twitter:description" content="&lt;p&gt;Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
 La implementación que hice era bastante sencilla para lo que me pedía el ejercicio&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;esPalindromo xs
-| xs == [] = False
-| odd (length xs) = False --es impar?
-| otherwise = 
-    drop mitad xs == reverse (take mitad xs …&lt;/pre&gt;&lt;/div&gt;" />
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class=&#34;err&#34;&gt;esPalindromo xs&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;| xs == [] = False&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;| odd (length xs) = False --es impar?&lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;| otherwise = &lt;/span&gt;
+&lt;span class=&#34;err&#34;&gt;    drop mitad xs == reverse (take mitad xs …&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;" />
     <script src="/theme/js/es-palindromo.js"></script>
     </head>
     <body>
@@ -56,14 +56,14 @@ La implementación que hice era bastante sencilla para lo que me pedía el ejerc
         <div id="contenido">
             <p>Hace tiempo hice de práctica con haskell una función que determinaba si una palabra era palíndroma o no.
 La implementación que hice era bastante sencilla para lo que me pedía el ejercicio</p>
-<div class="highlight"><pre><span></span>esPalindromo xs
-| xs == [] = False
-| odd (length xs) = False --es impar?
-| otherwise = 
-    drop mitad xs == reverse (take mitad xs) 
-    where
-        mitad = div (length xs) 2
-</pre></div>
+<div class="highlight"><pre><span></span><code><span class="err">esPalindromo xs</span>
+<span class="err">| xs == [] = False</span>
+<span class="err">| odd (length xs) = False --es impar?</span>
+<span class="err">| otherwise = </span>
+<span class="err">    drop mitad xs == reverse (take mitad xs) </span>
+<span class="err">    where</span>
+<span class="err">        mitad = div (length xs) 2</span>
+</code></pre></div>
 
 
 <p>Hace uso de funciones ya definidas en el lenguaje, y tiene un fallo enorme: Dice que la palabra no es palíndroma si su longitud es impar.

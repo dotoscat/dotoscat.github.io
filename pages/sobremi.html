@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>oscartrigarmatica</title>
+        <link rel="stylesheet" href="/css/main.css">
+        
+        
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">oscartrigarmatica</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Principal</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                    <li><a href="/pages/politica-de-cookies.html">Política de cookies</a></li>
+                    <li><a href="/pages/portafolio.html">Portafolio</a></li>
+                    <li><a href="/pages/sobremi.html">Sobre mí</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        
+<article>
+    <script>
+'use strict';
+
+window.addEventListener('load', evt => {
+    const nacimiento = document.getElementById('nacimiento');
+    const fechaNacimiento = nacimiento.dataset.fechanacimiento;
+    const edad = Math.floor((Date.now() - new Date(fechaNacimiento)) / 1000 / 60 / 60 / 24 / 365);
+    nacimiento.innerText = nacimiento.innerText.replace(/\(.*?\)/, edad);
+});
+
+</script>
+
+<h2>TL;DR</h2>
+
+<p>&ldquo;Hola mundo&rdquo;</p>
+
+<h2>Completo</h2>
+
+<p>Me llamo Óscar Triano García <span id="nacimiento" data-fechanacimiento="1987">y tengo (mmmm&hellip;) años<span><noscript> (usa JavaScript para calcular mi edad. Nací el 5 de Octubre de 1987)</noscript>.</p>
+
+<p>Mi interés por la informática empezó cuando quería hacer juegos desde pequeño. Con el tiempo
+me he ido interesando otras áreas de la informática como el diseño y desarrollo de máquinas virtuales, los lenguajes de programación en sí, la arquitectura de computadoras&hellip; Por lo general hago diseño y el desarrollo de aplicaciones informáticas. Me puedo defender en la administración de sistemas, sobre todo bajo Linux.</p>
+
+<p>Me gusta hacer las cosas lo más simple posible, con el menor número de fallos que pueda y haciendo más con menos. Suelo preferir hacer las soluciones de forma multiplataforma, por lo que la web es un enorme lienzo en el que se puede hacer y compartir muchas cosas.</p>
+
+<p>Mis herramientas principales son Python, JavaScript, HTML5 y CSS3. También sé C, Lua, SQL (con MySQL, Postgre y SQLite) y PHP.</p>
+
+<p>Tengo un buen nivel inglés técnico para poder leer la documentación que necesito, y escribir. Aunque mi inglés conversacional no es muy bueno lo estoy trabajando.</p>
+
+</article>
+
+        <footer>
+            
+            
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Excepto donde se indique lo contrario esta obra cuyo autor es <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Oscar Triano García</span> está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Reconocimiento-CompartirIgual 4.0 Internacional de Creative Commons</a>.</p>
+            
+            
+            <small>This site is synthetized by <a href="https://github.com/dotoscat/archivasa">archivasa</a></small>
+        </footer>
+    </body>
+</html>
