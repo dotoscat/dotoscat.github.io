@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>oscartrigarmatica</title>
+        <link rel="stylesheet" href="/css/main.css">
+        
+        
+        
+        
+    </head>
+    <body>
+        <header>
+            <h1><a href="/">oscartrigarmatica</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Principal</a></li>
+                    <li><a href="/pages/contacto.html">Contacto</a></li>
+                    <li><a href="/pages/enlaces.html">Enlaces</a></li>
+                    <li><a href="/pages/politica-de-cookies.html">Política de cookies</a></li>
+                    <li><a href="/pages/portafolio.html">Portafolio</a></li>
+                    <li><a href="/pages/sobremi.html">Sobre mí</a></li>
+                    
+                </ul>
+            </nav>
+        </header>
+        
+<article>
+    <h1>GOTO, un mal necesario</h1>
+
+<p><em>goto</em> es una instrucción en programación en el que saltas a una posición dentro de la ejecución del código.
+Este salto puede ser tanto para atrás como hacia adelante. Funciona mas o menos así para que se entienda</p>
+
+<pre><code>comienzo:
+if (algo) {
+    goto final;
+}
+// algo
+goto comienzo:
+final:
+printf(&quot;bye&quot;);
+</code></pre>
+
+<p>Si uno ya tiene experiencia programando se ve que lo que hay entre <em>comienzo:</em> y <em>goto comienzo</em> se puede reemplazar por un <em>while</em>, y quizá se pueda reemplazar <em>goto final</em> por otra cosa.</p>
+
+<p>goto no está en todos los lenguajes de programación, y que yo sepa solamente BASIC, C/C++, D y golang tienen esta instrucción (seguramente otros más) mas o menos como herencia portable de la instrucción de salto en ensablador <em>JMP</em>.</p>
+
+<p>El caso es que muchas veces se ha utilizado esta instrucción en el mundo académico como una instrucción tabú
+en el que si lo usas demuestras que eres un mal programador. Lo cierto es que hay proyectos importantes que usan <em>goto</em> como parte de su código y siempre respetando el estilo de programación estructurada. Para empezar:</p>
+
+<ul>
+<li><a href="https://github.com/torvalds/linux/search?q=goto">En el proyecto del núcleo linux</a></li>
+<li><a href="https://github.com/python/cpython/search?q=goto">CPython o la principal máquina virtual de Python</a></li>
+<li><a href="https://github.com/golang/go/search?p=1&amp;q=goto">O en la principal implementación de Go</a></li>
+</ul>
+
+<p>¿Esto significa que son malos programadores? Para nada. <em>goto</em> es una herramienta mas que puede ser malusada, como
+esos <em>if</em> o <em>for</em> anidados.
+Basándose en el ejemplo anterior se puede hacer un bucle que cuente hasta 10 usando goto</p>
+
+<pre><code>i := 0
+comienzo:
+    i++
+    fmt.Println(i)
+    if i &gt;= 10 {
+        goto fin
+    }
+goto comienzo
+fin:
+// algo
+</code></pre>
+
+<p>Y ahora usando <em>for</em></p>
+
+<pre><code>for i := 0; i &lt; 10; i++ {
+    fmt.Println(i)
+}
+// fin
+</code></pre>
+
+<p>En el segundo ejemplo que usar <em>for</em> es mucho mas claro porque muestra la intención que es iterar mientras se cumpla la condición,
+mientras que en el primero tienes que hacer un esfuerzo mental extra para saber qué se pretende hacer que este caso
+es lo mismo que en el segundo.</p>
+
+<p>Hay casos donde <em>goto</em> pueden ser bastante bien usado, como este:</p>
+
+<pre><code>bool operacionCritica(cosa *uno) {
+    // operaciones básicas de inicio
+    bool resultado = true;
+    // mas operaciones
+    if (pasaAlgoMalo) {
+        resultado = false;
+        goto limpiar;
+    }
+    // mas operaciones, porque todo está bien
+    limpiar:
+    // operaciones de limpieza
+    return resultado;
+}
+</code></pre>
+
+<p>o este:</p>
+
+<pre><code>// este trozo está dentro de una función o método
+switch(tipo) {
+    case FLACO:
+        // operaciones en FLACO
+        break;
+    case CORTO:
+        // operaciones en CORTO
+        if (noConvence) { // si no convence a pesar de ser corto...
+            goto adefault;
+        }
+        // mas operaciones en CORTO
+        break;
+    default: // hay mas tipos aparte de FLACO o CORTO
+        adefault:
+        // operaciones en default
+        return NO;
+        // el break no tiene sentido aqui si se devuelve un valor
+}
+return SI;
+</code></pre>
+
+<p>En estos casos las reglas con el <em>goto</em> son <strong>no te repitas</strong> y <strong>mantenlo simple</strong>. También nunca ir a hacer un salto hacia arriba, <strong>siempre hacia abajo</strong>.</p>
+
+<p>Con todo esto intento demostrar que el <em>goto</em> bien usado es una instrucción que puede ayudar mucho en la claridad
+del código. Siempre que sea posible se debe usar instrucciones de control de flujo como <em>if</em>, <em>for</em> o <em>switch</em>, que al fin y al cabo son goto glorificados para abstraer al programador de los saltos en el código.</p>
+
+<p>Muchas gracias por leer.</p>
+
+</article>
+
+        <footer>
+            
+            
+            <p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />Excepto donde se indique lo contrario esta obra cuyo autor es <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Oscar Triano García</span> está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">licencia de Reconocimiento-CompartirIgual 4.0 Internacional de Creative Commons</a>.</p>
+            
+            
+            <small>This site is synthetized by <a href="https://github.com/dotoscat/archivasa">archivasa</a></small>
+        </footer>
+    </body>
+</html>
