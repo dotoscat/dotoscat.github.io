@@ -35,4 +35,5 @@ pre {
     padding: 0.5rem;
     background-color: darkblue;
     color: whitesmoke;
+    overflow-y: auto;
 }
