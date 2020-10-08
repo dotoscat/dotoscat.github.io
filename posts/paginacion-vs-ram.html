@@ -27,24 +27,24 @@
         </header>
         
 <article>
-    <h1>problema práctico en una empresa, paginación</h1>
+    <h1>Problema práctico en una empresa, paginación</h1>
 
 <p>En una aplicación web es común hacer listados por ejemplo de clientes o de inventario, y la verdad
 es bastante fácil de distribuir una aplicación web, la web es universal. La contraparte es que pueden a llegar a
 consumir mucha RAM, mas o menos dependiendo del navegador. Yo siempre he sido partidario de aprovechar la RAM pero no desperdiciarla.</p>
 
-<p>El caso es que en la web de la empresa el problema que yo recuerdo que había es que cargaba todos las tarifas en una misma página.
+<p>El caso es que en la web de la empresa el problema que yo recuerdo que había es que cargaba todos las tarifas en una misma página tardando hasta minutos en hacerlo.
 No solamente eso, sino que además los administradores tenían su ordenador todos los días encendido con el navegador abierto por lo que el <a href="https://kb.nmsu.edu/page.php?id=82336">consumo de RAM se incrementaba con el tiempo</a>. El otro problema con la aplicación era que si aumentaban las tarifas también aumentaban linearmente la carga de estas y además linearmente el uso de RAM.</p>
 
 <h2>Solución</h2>
 
-<p>¿Solución? Se compraron ordenadores nuevos, con más RAM. Si bien esto solucionaba el problema temporalmente no lo hacía con la carga, y con respecto a la RAM solamente daban una patada al problema que se haría mas grande después. Entre que se pensaba comprar mas RAM u otros ordenadores con mas RAM y soluciones software como concurrencia (??) no iba a resolver el problema. Sobre la concurrencia no resolvería el problema porque el problema era en el lado del cliente con respecto a la carga, no importa cuántas manos haya para pillar datos, al final estás sobrecargando el navegador con la acumulación de todos esos datos.</p>
+<p>¿Solución? Se compraron ordenadores nuevos, con más RAM. Si bien esto solucionaba el problema temporalmente no lo hacía con la carga, y con respecto a la RAM solamente daban una patada al problema que se haría mas grande después. Las solucines que habían era comprar mas RAM u otros ordenadores con mas RAM y soluciones software como concurrencia. Sobre la concurrencia no resolvería el problema porque el problema era en el lado del cliente con respecto a la carga, no importa cuántas manos haya para pillar datos, al final estás sobrecargando el navegador con la acumulación de todos esos datos.</p>
 
 <p>La solución era mucho más sencilla que todo lo de arriba, y más barato, y es usar una técnica que usan muchos frameworks web como <a href="https://github.com/django/django/blob/0a306f7da668e53af2516bfad759b52d6c650b69/django/core/paginator.py">Django</a> o <a href="https://laravel.com/docs/8.x/pagination">Laravel</a>: paginar los datos.</p>
 
-<p>Paginar consiste en pedir y mostrar una parte de todos los datos mientras mantienes referencias a esas otras partes para igualmente pedirlas y mostrarlas. Todo esto se hace desde lado del servidor, al final el lado cliente reciba la parte ya procesada.</p>
+<p>Paginar consiste en pedir y mostrar una parte de todos los datos mientras mantienes referencias a esas otras partes para igualmente pedirlas y mostrarlas. Todo esto se hace desde lado del servidor para que al final el lado cliente reciba la parte ya procesada.</p>
 
-<p>La web de la empresa no usaba ningún framework, nada recomendable para un proyecto grande y crítico. Así que tocaba hacer uno a mano. Lo hice de esta forma:</p>
+<p>La web de la empresa no usaba ningún framework, nada recomendable para un proyecto grande y crítico. Así que tocaba hacer uno a mano. Se hizo de esta forma:</p>
 
 <ol>
 <li><p>Calcular el total del número de entradas de la petición</p>
@@ -74,7 +74,7 @@ No solamente eso, sino que además los administradores tenían su ordenador todo
 
 <p>Contar el número de registros de una tabla a través de un gestor de base de datos a pesar de ser lineal es mucho mas eficiente que hacerlo con un lenguaje de programación en el servidor.</p>
 
-<p>Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado mas contentos y la página no tarda minutos en cargarse. El tiempo de carga y uso de RAM es mas o menos constante de unos segundos.</p>
+<p>Tras implementar esta solución los administradores y los clientes de empresa dentro de lo que caben se han quedado mas contentos y la página no tarda minutos en cargarse. El tiempo de carga es mas o menos constante de unos segundos y el uso de RAM no se dispara.</p>
 
 <p>Siempre es mejor tirar de la solución mas sencilla y barata que complicarse. Gracias por leer.</p>
 
