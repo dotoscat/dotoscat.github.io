@@ -24,6 +24,18 @@ article {
     padding: 1rem;
 }
 
+.selected {
+    background-color: aliceblue;
+    border: thin solid lightblue;
+}
+
+nav ul li {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding: 0.5rem;
+    display: inline-block;
+}
+
 @media (min-width: 60rem) {
     article {
         border-left: thin solid lightblue;
