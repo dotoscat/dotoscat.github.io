@@ -6,16 +6,16 @@
     <description>Recent content in misc on Oscar Triano García</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Sat, 02 Dec 2023 18:06:16 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 06 Dec 2023 20:22:36 +0100</lastBuildDate>
     <atom:link href="https://dotoscat.github.io/tags/misc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hello World</title>
-      <link>https://dotoscat.github.io/posts/hello-world/</link>
-      <pubDate>Sat, 02 Dec 2023 18:06:16 +0100</pubDate>
-      <guid>https://dotoscat.github.io/posts/hello-world/</guid>
-      <description>Hola mundo Hola mundo, ¿qué tal?
-Texto &amp;ldquo;aleatorio&amp;rdquo;.
-¿Quieres buscar algo?</description>
+      <title>Nuevo</title>
+      <link>https://dotoscat.github.io/posts/nuevo/</link>
+      <pubDate>Wed, 06 Dec 2023 20:22:36 +0100</pubDate>
+      <guid>https://dotoscat.github.io/posts/nuevo/</guid>
+      <description>Nuevo, nuevo comienzo, nuevo todo.
+Quería escribir en mi sitio pero solamente cuando tenga un versión funcional de generador de sitio web estático. Esto implica implementar fechas, categorías, manejear estilos, manejar elementos estáticos&amp;hellip; Pero claro, generadores de sitios web estáticos hay montones ya probados y funcionales y yo quiero escribir ya. Así que he dejado apartado mi proyecto y he adoptado hugo, y estoy familiarizándome con él.
+He aprendido mucho haciendo mi pequeño proyecto pero ya quería tener algo funcional y que lo haga bien.</description>
     </item>
   </channel>
 </rss>

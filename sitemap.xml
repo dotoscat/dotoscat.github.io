@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://dotoscat.github.io/tags/misc/</loc>
+    <lastmod>2023-12-06T20:22:36+01:00</lastmod>
+  </url><url>
     <loc>https://dotoscat.github.io/posts/nuevo/</loc>
+    <lastmod>2023-12-06T20:22:36+01:00</lastmod>
+  </url><url>
+    <loc>https://dotoscat.github.io/tags/</loc>
     <lastmod>2023-12-06T20:22:36+01:00</lastmod>
   </url><url>
     <loc>https://dotoscat.github.io/proyectos/</loc>
@@ -10,15 +16,6 @@
   </url><url>
     <loc>https://dotoscat.github.io/quiensoy/</loc>
     <lastmod>2023-12-06T13:23:10+01:00</lastmod>
-  </url><url>
-    <loc>https://dotoscat.github.io/posts/hello-world/</loc>
-    <lastmod>2023-12-02T18:06:16+01:00</lastmod>
-  </url><url>
-    <loc>https://dotoscat.github.io/tags/misc/</loc>
-    <lastmod>2023-12-02T18:06:16+01:00</lastmod>
-  </url><url>
-    <loc>https://dotoscat.github.io/tags/</loc>
-    <lastmod>2023-12-02T18:06:16+01:00</lastmod>
   </url><url>
     <loc>https://dotoscat.github.io/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
